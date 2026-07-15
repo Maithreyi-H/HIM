@@ -56,6 +56,21 @@ backend/
 ## Current Version
 
 **v0.2**
+## Version History
+
+### v0.1
+- Local chat
+
+### v0.2
+- Character foundation
+
+### v0.3
+- Conversation memory
+
+### v0.4
+- SQLite database layer
+- Modular database architecture
+- Users, memories, relationship, and conversation_summary tables
 
 ### Completed
 
