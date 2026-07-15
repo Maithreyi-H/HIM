@@ -1,27 +1,9 @@
-# Python
 __pycache__/
-*.py[cod]
+*.pyc
 *.pyo
-
-# Virtual Environment
-venv/
-.venv/
-
-# Environment Variables
-.env
-
-# VS Code
-.vscode/
-
-# Database
 *.db
-
-# macOS
-.DS_Store
-
-# Windows
-Thumbs.db
-desktop.ini
-
-# Logs
-*.log
+*.sqlite
+*.sqlite3
+.env
+.vscode/
+.idea/
