@@ -1,19 +1,18 @@
-from ollama import chat
+from personality.loader import CharacterLoader
+from prompts.builder import PromptBuilder
+from services.ollama_service import OllamaService
 
 
 class Brain:
-    def __init__(self, model="qwen3:8b"):
-        self.model = model
+    def __init__(self):
+        self.character = CharacterLoader("jungkook")
+        self.builder = PromptBuilder()
+        self.llm = OllamaService()
 
-    def ask(self, message: str) -> str:
-        response = chat(
-            model=self.model,
-            messages=[
-                {
-                    "role": "user",
-                    "content": message
-                }
-            ]
+    def ask(self, user_message: str) -> str:
+        messages = self.builder.build(
+            self.character,
+            user_message
         )
 
-        return response["message"]["content"]
+        return self.llm.generate(messages)
